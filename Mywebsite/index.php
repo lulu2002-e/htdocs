@@ -43,7 +43,7 @@
                 });
 
                 if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                    throw new Error(HTTP error! status: ${response.status});
                 }
 
                 const data = await response.json();
@@ -85,7 +85,7 @@
                 const errorRow = document.createElement("tr");
                 const errorCell = document.createElement("td");
                 errorCell.colSpan = 6;
-                errorCell.textContent = `Error: ${error.message}`;
+                errorCell.textContent = Error: ${error.message};
                 errorCell.style.color = "red";
                 errorRow.appendChild(errorCell);
                 tableBody.appendChild(errorRow);
