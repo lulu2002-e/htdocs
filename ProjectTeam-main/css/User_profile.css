@@ -1,0 +1,112 @@
+/* General Body Styling */
+body {
+    font-family: 'Ubuntu', Arial, sans-serif; /* Ubuntu font */
+    margin: 0;
+    padding: 0;
+    background-color: rgb(245, 245, 220); /* Background: Beige */
+    color: #333; /* Default text color */
+}
+
+/* Shared Container Styling */
+.profile_edit-container,
+.profile_view-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header and Footer Styling */
+header,
+footer {
+    background-color: rgb(87, 81, 81); /* Header/Footer: Dark Gray */
+    color: white; /* Text in header and footer */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Headers */
+h1 {
+    text-align: center;
+    color: #333; /* Dark gray for headings */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Bold Text */
+strong,
+form label {
+    font-weight: bold; /* Bold text */
+    color: black; /* Black for bold things */
+}
+
+/* Form Styling */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Input Fields */
+form input:focus {
+    border-color: rgb(87, 81, 81); /* Dark gray outline for focus */
+    outline: none;
+    box-shadow: 0 0 4px rgba(87, 81, 81, 0.6);
+}
+
+/* Button Styling */
+form button {
+    background-color: rgb(87, 81, 81); /* Button color to match header/footer */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #5a5656; /* Slightly lighter gray for hover effect */
+}
+
+/* Profile Picture Styling */
+.profile-picture {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-edit-container,
+    .profile-view-container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    form input,
+    form button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,284 @@
+/* general styling*/
+body {
+  font-family: Arial,  sans-serif;
+  background-color: rgb(245,245,220);
+  color: #000;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: 100%;
+  flex-direction: column;
+}
+    
+    /*header*/
+    .header {
+      background-color:  rgb(87,81,81);
+      color: white;
+      }
+      
+      .header .logo{
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      
+      .header .nav-link{
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+      
+      .header .nav-link:hover{
+        text-decoration: underline;
+      }
+     
+      h4 {
+        color: black;
+        margin-bottom: 0.5em;
+      }
+      /*room-image*/
+      .room-image{
+        padding: 1em;
+        margin-bottom: 1em;
+        border-radius: 10px;
+        background: whitesmoke;
+        gap: 1em;
+    }
+      .room-image img {
+        width: 100%;
+        /* height: 150px; */
+        margin: 10px;
+        border-radius: 10px;
+        object-fit: cover;
+        padding: 60px;
+    }
+    .description{
+      padding: 1em;
+      margin-bottom: 1em;
+      border-radius: 10px;
+      background: whitesmoke;
+      gap: 1em;
+
+
+    }
+
+    .room-number{
+      padding: 1em;
+      margin-bottom: 1em;
+      border-radius: 10px;
+      background: whitesmoke;
+      gap: 1em;
+      box-sizing: border-box;
+    }
+    /* time*/
+      .time {
+        box-sizing: border-box;
+        flex: 1;
+        background: whitesmoke;
+        padding: 2em;
+        border-radius: 10px;
+      }
+
+      .time label {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 1em 0 0.5em 0;
+        color: black;
+        transition: color 0.3s ease;
+      }
+
+      .time input[type="date"],
+      .time input[type="time"] {
+        width: 100%;
+        padding: 10px 40px 10px 10px;
+        font-size: 18px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        background-color: white;
+        margin-bottom: 1em;
+        transition: all 0.3s ease;
+        height: 50px;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      .time input[type="date"]:hover,
+      .time input[type="time"]:hover {
+        border-color: rgb(87,81,81);;
+        box-shadow: 0 0 10px rgba(76, 175, 80, 0.1);
+      }
+
+      .time input[type="date"]:focus,
+      .time input[type="time"]:focus {
+        outline: none;
+        border-color:rgb(87,81,81);
+        box-shadow: 0 0 15px rgba(76, 175, 80, 0.2);
+        transform: scale(1.02);
+      }
+
+      .time input:focus + label,
+      .time input:not(:placeholder-shown) + label {
+        color:black;;
+      }
+   
+ /* my style*/
+/* Status Section */
+.conflict-status{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    margin: 2em 0;
+    flex: 1;
+    background: whitesmoke;
+    padding: 1em;
+    border-radius: 10px;
+  }
+
+  /* Add these to your existing CSS */
+  .alert {
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+  
+  .alert-success {
+    background-color: rgba(76, 175, 80, 0.1);
+    border: 1px solid #4CAF50;
+    color: #4CAF50;
+  }
+  
+  .alert-danger {
+    background-color: rgba(244, 67, 54, 0.1);
+    border: 1px solid #F44336;
+    color: #F44336;
+  }
+  
+  .alert i {
+    margin-right: 10px;
+  }
+/* Actions */
+  .actions {
+    text-align: center;
+  }
+  /* buttons -confirm ,cancel , modify*/
+  button {
+    padding: 0.8em 2em;
+    margin: 0 1em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .confirm-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .modify-btn {
+    background-color: #FFC107;
+    color: white;
+  }
+  
+  .cancel-btn {
+    background-color: #F44336;
+    color: white;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+
+  .footer {
+    margin-top: auto;
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgb(87,81,81);
+    color: white;
+  }
+
+/* Add these media queries at the end of your file */
+@media screen and (max-width: 768px) {
+  /* Room image adjustments */
+  .room-image img {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  /* Time section adjustments */
+  .time {
+    padding: 1em;
+  }
+
+  .time input[type="date"],
+  .time input[type="time"] {
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  /* Status section adjustments */
+  .conflict-status {
+    
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  /* Button adjustments */
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  button {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Header adjustments */
+  .header {
+    padding: 10px;
+  }
+
+  .header .logo {
+    font-size: 1.2rem;
+  }
+
+  /* Description and room number adjustments */
+  .description,
+  .room-number {
+    padding: 15px;
+  }
+}
+
+/* Calendar popup styling */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-time-picker-indicator {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.time {
+  position: relative;
+  padding: 1.5em;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .time input[type="date"],
+  .time input[type="time"] {
+    height: 45px;
+    padding: 8px;
+    font-size: 16px;
+  }
+}

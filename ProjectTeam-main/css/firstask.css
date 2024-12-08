@@ -1,0 +1,245 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(245, 245, 220);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #000;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background-color: rgb(87, 81, 81);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+header .nav {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+header .nav-item {
+  margin: 0 10px;
+}
+
+header .nav-link {
+  text-decoration: none;
+  color: white;
+}
+
+header .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: rgb(87, 81, 81);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: auto;
+}
+
+/* Homepage Sections */
+
+/* About Us Section */
+#about-us {
+  background-color: rgb(245, 245, 220);
+}
+
+#about-us h2,
+#about-us h3 {
+  font-weight: bold;
+  color: #000;
+}
+
+#about-us p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000;
+}
+
+#about-us blockquote {
+  font-style: italic;
+  color: rgb(87, 81, 81);
+  border-left: 4px solid black;
+  padding-left: 10px;
+}
+
+/* Timeline */
+.timeline {
+  margin-top: 3rem;
+}
+
+.timeline-card {
+  transition: transform 0.3s ease-in-out;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-card:hover {
+  transform: scale(1.05);
+}
+
+/* Fun Fact Section */
+.fact-card {
+  color: white;
+  background-color: rgb(87, 81, 81);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.fact-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Hero Section */
+.hero {
+  background-color: rgb(245, 245, 220);
+  color: #000;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+}
+
+.hero .btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Features Section */
+.features-card {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.features-card:hover {
+  transform: translateY(-10px);
+}
+
+.features-cs {
+  color: #000;
+  background-color: rgb(245, 213, 53);
+}
+
+.features-is {
+  color: white;
+  background-color: rgb(188, 31, 31);
+}
+
+.features-ce {
+  color: white;
+  background-color: rgb(8, 74, 160);
+}
+
+/* Contact Section */
+#contact input,
+#contact textarea {
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#contact button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+#contact button:hover {
+  background-color: rgb(87, 81, 81);
+}
+
+/* Form Styling (Register and Login Pages) */
+form {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+form .form-group {
+  margin-bottom: 16px;
+}
+
+form .form-group label {
+  font-weight: bold;
+  color: black;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: rgb(87, 81, 81);
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: black;
+}
+form select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}

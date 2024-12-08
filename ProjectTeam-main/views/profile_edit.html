@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styling for layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .profile-edit-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-edit-container">
+        <h1>Edit Profile</h1>
+        <form action="profile_edit.php" method="POST" enctype="multipart/form-data">
+            <!-- Name Field -->
+            <label for="name">Name:</label>
+            <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder="Enter your name" 
+                required
+                aria-label="Name">
+            
+            <!-- Email Field -->
+            <label for="email">Email:</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="Enter your email" 
+                required
+                aria-label="Email">
+            
+            <!-- Profile Picture Upload -->
+            <label for="profile_picture">Profile Picture:</label>
+            <input 
+                type="file" 
+                id="profile_picture" 
+                name="profile_picture" 
+                accept="image/*"
+                aria-label="Profile Picture">
+
+            <!-- Password Fields -->
+            <label for="old_password">Current Password:</label>
+            <input 
+                type="password" 
+                id="old_password" 
+                name="old_password" 
+                placeholder="Enter current password"
+                aria-label="Current Password">
+
+            <label for="new_password">New Password:</label>
+            <input 
+                type="password" 
+                id="new_password" 
+                name="new_password" 
+                placeholder="Enter new password"
+                aria-label="New Password">
+
+            <label for="confirm_password">Confirm New Password:</label>
+            <input 
+                type="password" 
+                id="confirm_password" 
+                name="confirm_password" 
+                placeholder="Confirm new password"
+                aria-label="Confirm Password">
+
+            <!-- Save Changes Button -->
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+    <script>
+        // Client-side validation for file uploads and passwords
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const profilePicture = document.getElementById('profile_picture').files[0];
+            const newPassword = document.getElementById('new_password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+
+            // Validate file size (max 2MB)
+            if (profilePicture && profilePicture.size > 2 * 1024 * 1024) {
+                alert('Profile picture must be less than 2MB.');
+                e.preventDefault();
+                return;
+            }
+
+            // Validate new password confirmation
+            if (newPassword !== confirmPassword) {
+                alert('New password and confirmation do not match.');
+                e.preventDefault();
+                return;
+            }
+        });
+    </script>
+</body>
+</html>
